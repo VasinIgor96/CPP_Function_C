@@ -7,13 +7,13 @@ int mystrcmp(const char* str1, const char* str2) {
     }
 
     if (*str1 == *str2) {
-        return 0;  // рядки рівні
+        return 0;  
     }
     else if (*str1 > *str2) {
-        return 1;  // перший рядок більший за другий
+        return 1;  
     }
     else {
-        return -1; // перший рядок менший за другий
+        return -1; 
     }
 }
 
@@ -22,7 +22,7 @@ int StringToNumber(char* str) {
 }
 
 char* NumberToString(int number) {
-    char* str = (char*)malloc(sizeof(char) * 12); // достатньо пам'яті для максимального цілого
+    char* str = (char*)malloc(sizeof(char) * 12); 
     sprintf(str, "%d", number);
     return str;
 }
@@ -79,19 +79,18 @@ char* mystrcpy(char* str1, const char* str2) {
         ptr++;
         str2++;
     }
-    *ptr = '\0'; // додавання нуль-термінатора
+    *ptr = '\0'; 
     return str1;
 }
 
 char* mystrcat(char* str1, const char* str2) {
-    char* ptr = str1 + mystrlen(str1); // перехід до кінця str1
+    char* ptr = str1 + mystrlen(str1); 
     while (*str2) {
         *ptr = *str2;
         ptr++;
         str2++;
     }
-    *ptr = '\0'; // додавання нуль-термінатора
-    return str1;
+    *ptr = '\0'; 
 }
 
 char* mystrchr(char* str, char s) {
@@ -101,7 +100,7 @@ char* mystrchr(char* str, char s) {
         }
         str++;
     }
-    return NULL; // символ не знайдено
+    return NULL; 
 }
 
 char* mystrstr(char* str1, char* str2) {
@@ -113,9 +112,9 @@ char* mystrstr(char* str1, char* str2) {
             ptr2++;
         }
         if (!*ptr2) {
-            return str1; // знайдено підрядок
+            return str1; 
         }
         str1++;
     }
-    return NULL; // підрядок не знайдено
+    return NULL; 
 }
